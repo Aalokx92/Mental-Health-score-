@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const API_BASE = "http://127.0.0.1:8000";
+  const API_BASE = "https://mental-health-score-4-ngcm.onrender.com";
 
   const form = document.getElementById("predict-form");
   const submitBtn = document.getElementById("submit-btn");
@@ -281,7 +281,7 @@
 
       //tdfghfhjgfhhjklhhujfgjhk,hk,ghjkghuyhgkhuyukfjdcjkrtdrhtu
 
-      
+
       if (typeof data.predicted_mental_health_score !== "number") {
         renderError("Unexpected response", "The API responded, but the score was missing or malformed.");
         return;
