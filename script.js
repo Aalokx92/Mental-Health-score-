@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const API_BASE = "http://127.0.0.1:8000 ";
+const API_BASE = "http://127.0.0.1:8000";
 
   const form = document.getElementById("predict-form");
   const submitBtn = document.getElementById("submit-btn");
@@ -233,11 +233,7 @@
     clearAllErrors();
 
     const payload = collectPayload();
-
-
-    //ytdfygthfhyjghfhgytfjyhghjjhjkgjhhjgjh
-
-
+    console.log("Frontend input:", payload); //shdsfkhdfkdshfsdkfhdskjfhdskbjfkjsdkjfhds
     const clientErrors = validate(payload);
 
     if (clientErrors.length > 0) {
@@ -277,11 +273,7 @@
       }
 
       const data = await res.json();
-
-
-      //tdfghfhjgfhhjklhhujfgjhk,hk,ghjkghuyhgkhuyukfjdcjkrtdrhtu
-
-
+      console.log("Backend prediction:", data);   //fkldhflksahfdskfhdsklfjhdsgkjfdshgfkjdsjfhdhjsb
       if (typeof data.predicted_mental_health_score !== "number") {
         renderError("Unexpected response", "The API responded, but the score was missing or malformed.");
         return;
